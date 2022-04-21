@@ -2,7 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-public class calculatorTest {
+public class CalculatorTest {
+
     @Test
     public void shouldReturn2when1plus1() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Calculator calculator = new Calculator();

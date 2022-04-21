@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Calculator{
+    +compute(int num1, int num2, String symbol)
+}
+
+class Add{
+    +int compute(num1,num2)
+}
+
+class Sub{
+    +int compute(num1,num2)
+}
+
+class Multi{
+    +int compute(num1,num2)
+}
+
+Interface Computable{
+   {abstract} +int compute(num1,num2)
+}
+
+class ComputeFactory{
+    +Computable getCompute(String symbol)
+}
+
+Computable <|-- Add :实现接口
+Computable <|-- Sub :实现接口
+Computable <|-- Multi:实现接口
+Calculator --> ComputeFactory :1.通过ComputeFactory获取Computable实例
+Calculator .. Computable :2.调用Computable实例的compute方法计算
+Add --> "Classname" ComputeFactory
+Sub --> "Cassname" ComputeFactory
+Multi --> "Classname" ComputeFactory
+
+note top of Calculator
+  compute()中调用ComputeFactory()
+  生成Computable实例进行计算
+end note
+
+note right of ComputeFactory
+    根据symbol生成Computable
+    实例并返回
+end note
+
+note right of Computable
+    抽象方法compute()
+end note
+
+@enduml
