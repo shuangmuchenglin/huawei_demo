@@ -1,5 +1,5 @@
 /**
- * @ClassName: getMinSum_13
+ * @ClassName: GetMinSum_13
  * @Author: Zuo
  * @Date 2022/4/18
  * @Version 1.0
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-public class getMinSum_13 {
+public class GetMinSum_13 {
     static class Pair {
         int index1;
         int index2;

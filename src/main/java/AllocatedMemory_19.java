@@ -17,45 +17,45 @@ import java.util.TreeMap;
 
 public class AllocatedMemory_19 {
     static class AllocatedMemory {
-        private TreeMap<Integer, Integer> hasAllocated;
-        private int ADDRESS_DEFAULT_HEAD = 0;
-        private int ADDRESS_DEFAULT_END = 100;
+        //记录已分配内存的起始地址和结束地址
+        private TreeMap<Integer, Integer> allocatedMap;
+
         AllocatedMemory() {
-            hasAllocated = new TreeMap<>();
+            allocatedMap = new TreeMap<>();
         }
 
         // 返回分配的内存首地址(string)，失败返回字符串 "error"
         String request(int size) {
             // 在此补充你的代码
-            int addressHead = ADDRESS_DEFAULT_HEAD;
+            int addressStart = 0;
             if (size <= 0 || size > 100) {
                 return "error";
             }
-            if (hasAllocated.isEmpty()) {
-                hasAllocated.put(ADDRESS_DEFAULT_HEAD, size);
+            if (allocatedMap.isEmpty()) {
+                allocatedMap.put(0, size);
             } else {
-                List<Integer> headList = new ArrayList<>(hasAllocated.keySet());
-                for (int i=0; i<headList.size(); i++) {
-                    if (headList.get(i) - addressHead >= size) {
-                        hasAllocated.put(addressHead, addressHead + size);
+                List<Integer> headList = new ArrayList<>(allocatedMap.keySet());
+                for (int i = 0; i < headList.size(); i++) {
+                    if (headList.get(i) - addressStart >= size) {
+                        allocatedMap.put(addressStart, addressStart + size);
                     } else {
-                        addressHead = hasAllocated.get(headList.get(i));
+                        addressStart = allocatedMap.get(headList.get(i));
                     }
                 }
-                if (size <= ADDRESS_DEFAULT_END - addressHead) {
-                    hasAllocated.put(addressHead, addressHead + size);
+                if (size <= 100 - addressStart) {
+                    allocatedMap.put(addressStart, addressStart + size);
                 } else {
                     return "error";
                 }
             }
-            return String.valueOf(addressHead);
+            return Integer.toString(addressStart);
         }
 
         // 成功返回 true；失败返回 false，失败时框架会自动输出 "error"
         boolean release(int startAddress) {
             // 在此补充你的代码
-            if (hasAllocated.containsKey(startAddress)) {
-                hasAllocated.remove(startAddress);
+            if (allocatedMap.containsKey(startAddress)) {
+                allocatedMap.remove(startAddress);
                 return true;
             }
             return false;
