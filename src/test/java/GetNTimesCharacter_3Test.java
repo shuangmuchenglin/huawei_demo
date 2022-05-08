@@ -1,4 +1,5 @@
 import org.junit.*;
+import problems.GetNTimesCharacter_3;
 
 public class GetNTimesCharacter_3Test {
 

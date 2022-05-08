@@ -1,4 +1,5 @@
 import org.junit.*;
+import problems.GetNormalDeviceNum_7;
 
 /**
  * @ClassName: GetNormalDeviceNum_7Test
