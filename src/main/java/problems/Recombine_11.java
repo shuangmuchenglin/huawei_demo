@@ -3,8 +3,6 @@ package problems; /**
  * @Author: Zuo
  * @Date 2022/4/18
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
@@ -61,23 +59,23 @@ public class Recombine_11 {
         boolean success = true;
         boolean end = false;
         for (DataFragment dataFragment : dataFragmentlist) {
-            if (dataFragment.index == start-1){
+            if (dataFragment.index == start - 1) {
                 continue;
-            } else if(dataFragment.index == start){
-                if (dataFragment.endFlag != 1){
-                    res.append(dataFragment.data.substring(0,dataFragment.len));
+            } else if (dataFragment.index == start) {
+                if (dataFragment.endFlag != 1) {
+                    res.append(dataFragment.data.substring(0, dataFragment.len));
                     start++;
-                } else{
-                    res.append(dataFragment.data.substring(0,dataFragment.len));
-                    end =true;
+                } else {
+                    res.append(dataFragment.data.substring(0, dataFragment.len));
+                    end = true;
                     break;
                 }
-            } else{
+            } else {
                 success = false;
                 break;
             }
         }
-        return (success==true&&end==true)?res.toString():"NA";
+        return (success == true && end == true) ? res.toString() : "NA";
     }
 }
 

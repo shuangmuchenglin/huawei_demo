@@ -1,4 +1,5 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.GetMinPeople_29
  * @Author: Zuo
  * @Date 2022/4/26
@@ -7,7 +8,7 @@ package problems; /**
 
 import java.util.*;
 
-/*
+/**
  * Copyright (c) Huawei Technologies Co., Ltd. 2019-2020. All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
@@ -61,19 +62,19 @@ public class GetMinPeople_29 {
             if (i == 0 && correctRanges[i][0] > start)
                 break;
             /**当前子区间的左端点小于等于待覆盖总区间的左端点（两区间可相连），此时待覆盖区间右区间端点取较大值(找最大延伸边的过程)，
-            end表明此时能覆盖的区间右端点值，注意此时count不需要自增*/
+             end表明此时能覆盖的区间右端点值，注意此时count不需要自增*/
             if (left <= start) {
                 end = Math.max(end, right);
             } else {
-            /**当前子区间的左端点大于待覆盖总区间的左端点（两区间断开），此时待覆盖区间根据上述找到的最大延伸边与端点值比较,判断能否连接
-             注意此时count需要自增*/
+                /**当前子区间的左端点大于待覆盖总区间的左端点（两区间断开），此时待覆盖区间根据上述找到的最大延伸边与端点值比较,判断能否连接
+                 注意此时count需要自增*/
                 count++;
                 start = end + 1;
                 //最大延伸边也连接不上，直接break
                 if (left > start) {
                     break;
                 } else {
-                //最大延伸边连接上，更新最大覆盖右端点值
+                    //最大延伸边连接上，更新最大覆盖右端点值
                     end = Math.max(end, right);
                 }
             }

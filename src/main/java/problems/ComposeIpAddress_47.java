@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.ComposeIpAddress_47
  * @Author: Zuo
  * @Date 2022/4/30
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
@@ -30,7 +29,7 @@ public class ComposeIpAddress_47 {
         backtrace(nums, set, res);
         long result = 1L;
         int size = set.size();
-        for (int i =0;i<4;i++){
+        for (int i = 0; i < 4; i++) {
             result *= size;
         }
         System.out.println(set);

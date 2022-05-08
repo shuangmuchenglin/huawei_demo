@@ -1,19 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.ExecCommand_33
  * @Author: Zuo
  * @Date 2022/4/26
  * @Version 1.0
- */
-
-import java.io.*;
-import java.math.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Description: 上机编程认证
  * Note: 缺省代码仅供参考，可自行决定使用、修改或删除
@@ -52,10 +42,10 @@ public class ExecCommand_33 {
             } else if (commands.charAt(i) == 'R') {
                 directionIndex = (directionIndex + 1) % 4;
             } else {
-                position[0]+=DirectionArr[directionIndex][0];
-                position[1]+=DirectionArr[directionIndex][1];
+                position[0] += DirectionArr[directionIndex][0];
+                position[1] += DirectionArr[directionIndex][1];
             }
         }
-        return "("+position[0]+","+position[1]+")";
+        return "(" + position[0] + "," + position[1] + ")";
     }
 }

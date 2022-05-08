@@ -13,9 +13,9 @@ public class VeneerAlarms_49 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int arr1Len = Integer.parseInt(scanner.nextLine());
-        String[] arr1=null, arr2=null;
+        String[] arr1 = null, arr2 = null;
         String s1 = scanner.nextLine();
-        if(arr1Len!=0){
+        if (arr1Len != 0) {
             arr1 = s1.split(" ");
         }
         int arr2Len = Integer.parseInt(scanner.nextLine());
@@ -25,14 +25,14 @@ public class VeneerAlarms_49 {
         }
         ArrayList<String> res = getVeneerAlarms(arr1, arr2);
         Collections.sort(res, (o1, o2) -> {
-            if(Long.parseLong(o1,16) - Long.parseLong(o2,16)>0L)
+            if (Long.parseLong(o1, 16) - Long.parseLong(o2, 16) > 0L)
                 return 1;
             else
                 return -1;
         });
         StringBuilder result = new StringBuilder();
         result.append("[");
-        result.append(String.join(" ",res));
+        result.append(String.join(" ", res));
         result.append("]");
         System.out.println(result.toString());
         scanner.close();
@@ -42,14 +42,14 @@ public class VeneerAlarms_49 {
         ArrayList<String> result = new ArrayList<>();
         if (arr1 != null) {
             for (String s : arr1) {
-                if(!result.contains(s)){
+                if (!result.contains(s)) {
                     result.add(s);
                 }
             }
         }
         if (arr2 != null) {
             for (String s : arr2) {
-                if(!result.contains(s)){
+                if (!result.contains(s)) {
                     result.add(s);
                 }
             }

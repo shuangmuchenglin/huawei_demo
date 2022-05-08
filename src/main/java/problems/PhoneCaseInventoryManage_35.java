@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.PhoneCaseInventoryManage_35
  * @Author: Zuo
  * @Date 2022/4/26
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Description: 上机编程认证
  * Note: 缺省代码仅供参考，可自行决定使用、修改或删除
@@ -65,7 +64,7 @@ public class PhoneCaseInventoryManage_35 {
                     res += price[e.getKey()];
                     demand -= inventory[e.getKey()];
                 }
-            }else {
+            } else {
                 break;
             }
         }

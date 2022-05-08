@@ -1,4 +1,5 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.GetNormalDeviceNum_7
  * @Description: 7。设备编号
  * @Author: Zuo

@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.CharacterSort_37
  * @Author: Zuo
  * @Date 2022/4/26
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Description: 上机编程认证
  * Note: 缺省代码仅供参考，可自行决定使用、修改或删除
@@ -49,11 +48,11 @@ public class CharacterSort_37 {
         Collections.sort(letterArr, (o1, o2) -> {
             int num1 = Character.getNumericValue(o1);
             int num2 = Character.getNumericValue(o2);
-            if(Character.isLowerCase(o1))
-                num1-=58;
-            if(Character.isLowerCase(o2))
-                num2-=58;
-            return num1-num2;
+            if (Character.isLowerCase(o1))
+                num1 -= 58;
+            if (Character.isLowerCase(o2))
+                num2 -= 58;
+            return num1 - num2;
         });
         System.out.println(digitArr);
         System.out.println(letterArr);
@@ -63,7 +62,7 @@ public class CharacterSort_37 {
             if (digitIndexArr.contains(i)) {
                 s.append(digitArr.get(indexdigit));
                 indexdigit++;
-            } else{
+            } else {
                 s.append(letterArr.get(indexletter));
                 indexletter++;
             }

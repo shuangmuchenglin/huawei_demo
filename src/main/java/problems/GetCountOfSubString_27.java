@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.GetCountOfSubString_27
  * @Author: Zuo
  * @Date 2022/4/26
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
@@ -51,8 +50,8 @@ public class GetCountOfSubString_27 {
         int temp = map.getOrDefault(input.charAt(index), -1);
         map.put(input.charAt(index), index);
         //与末尾字母相同的出现位置，则以该末尾字符结束的最大不重复子字符串长度如下
-        if(index-temp>maxLen+1){
-            maxLen = maxLen+1;
+        if (index - temp > maxLen + 1) {
+            maxLen = maxLen + 1;
         } else {
             maxLen = index - temp;
         }

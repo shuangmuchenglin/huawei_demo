@@ -1,4 +1,5 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.GetNTimesCharacter_3
  * @Description: 3. 公共字符
  * @Author: Zuo

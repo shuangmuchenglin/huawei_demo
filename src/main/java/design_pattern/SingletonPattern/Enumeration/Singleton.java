@@ -45,12 +45,12 @@ class MultiThread implements Runnable {
     public void run() {
         try {
             Thread.sleep(delay);
-            Singleton.INSTANCE.setName(name);
-            Singleton.INSTANCE.setAge(age);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Singleton.INSTANCE.toString());
+        Singleton.INSTANCE.setName(name);
+        Singleton.INSTANCE.setAge(age);
+        System.out.println(Singleton.INSTANCE);
         System.out.println(System.identityHashCode(Singleton.INSTANCE));
     }
 }

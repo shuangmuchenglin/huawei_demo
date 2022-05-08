@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.BinaryToDecimal_41
  * @Author: Zuo
  * @Date 2022/4/30
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd. 2020-2020. All rights reserved.
  * Description: 上机编程认证
  * Note: 缺省代码仅供参考，可自行决定使用、修改或删除
@@ -23,7 +22,7 @@ import java.util.Scanner;
 public class BinaryToDecimal_41 {
     // 待实现函数，在此函数中填入答题代码
     private static int binaryToDecimal(String binaryString) {
-        int res = (int)Long.parseLong(binaryString,2);
+        int res = (int) Long.parseLong(binaryString, 2);
         return res;
     }
 

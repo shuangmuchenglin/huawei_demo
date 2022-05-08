@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.GetMinSum_13
  * @Author: Zuo
  * @Date 2022/4/18
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd.  All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
@@ -59,7 +58,7 @@ public class GetMinSum_13 {
             if (heap.size() == 0) {
                 temp = new Pair(0, 0, array1[0] + array2[0]);
                 heap.offer(temp);
-                set.add(temp.index1 +"\t"+temp.index2);
+                set.add(temp.index1 + "\t" + temp.index2);
             } else {
                 temp = heap.poll();
                 res += temp.sum;
@@ -68,16 +67,16 @@ public class GetMinSum_13 {
                 index2 = temp.index2;
                 if (index1 + 1 < array1.length) {
                     temp = new Pair(index1 + 1, index2, array1[index1 + 1] + array2[index2]);
-                    if (!set.contains(temp.index1 +"\t"+temp.index2)) {
+                    if (!set.contains(temp.index1 + "\t" + temp.index2)) {
                         heap.offer(temp);
-                        set.add(temp.index1 +"\t"+temp.index2);
+                        set.add(temp.index1 + "\t" + temp.index2);
                     }
                 }
                 if (index2 + 1 < array2.length) {
                     temp = new Pair(index1, index2 + 1, array1[index1] + array2[index2 + 1]);
-                    if (!set.contains(temp.index1 +"\t"+temp.index2)) {
+                    if (!set.contains(temp.index1 + "\t" + temp.index2)) {
                         heap.offer(temp);
-                        set.add(temp.index1 +"\t"+temp.index2);
+                        set.add(temp.index1 + "\t" + temp.index2);
                     }
                 }
             }

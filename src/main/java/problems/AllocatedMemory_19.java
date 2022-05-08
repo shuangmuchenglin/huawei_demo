@@ -1,10 +1,9 @@
-package problems; /**
+package problems;
+/**
  * @ClassName: problems.AllocatedMemory_19
  * @Author: Zuo
  * @Date 2022/4/20
  * @Version 1.0
- */
-/*
  * Copyright (c) Huawei Technologies Co., Ltd.  All rights reserved.
  * Note: 提供的缺省代码仅供参考，可自行根据答题需要进行使用、修改或删除。
  */
